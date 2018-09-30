@@ -6,27 +6,45 @@
 		{{ csrf_field() }}
 		<div class="from-group">
 			<label for="">Username</label>
-			<input type="text" name="username" class="form-control" placeholder="Tên đăng nhập">
+			<input type="text" name="username" class="form-control" placeholder="Tên đăng nhập" value="{{ old('username') }}">
+			@if ($errors->has('username'))
+		        <span class="text-danger">{{ $errors->first('username') }}</span>
+		    @endif
 		</div>
 		<div class="from-group">
 			<label for="">Email</label>
-			<input type="email" name="email" class="form-control" placeholder="Email đăng nhập">
+			<input type="email" name="email" class="form-control" placeholder="Email đăng nhập" value="{{ old('email') }}">
+			@if ($errors->has('email'))
+		        <span class="text-danger">{{ $errors->first('email') }}</span>
+		    @endif
 		</div>
 		<div class="from-group">
 			<label for="">Password</label>
-			<input type="password" name="password" class="form-control" placeholder="Nhập Mật khẩu">
+			<input type="password" name="password" class="form-control" placeholder="Nhập Mật khẩu" value="{{ old('password') }}">
+			@if ($errors->has('password'))
+		        <span class="text-danger">{{ $errors->first('password') }}</span>
+		    @endif
 		</div>
 		<div class="from-group">
 			<label for="">Yourname</label>
-			<input type="text" name="yourname" class="form-control" placeholder="Họ và tên">
+			<input type="text" name="yourname" class="form-control" placeholder="Họ và tên" value="{{ old('yourname') }}">
+			@if ($errors->has('email'))
+		        <span class="text-danger">{{ $errors->first('email') }}</span>
+		    @endif
 		</div>
 		<div class="from-group">
 			<label for="">Phone</label>
-			<input type="text" name="phone" class="form-control" placeholder="Nhập Số điện thoại">
+			<input type="text" name="phone" class="form-control" placeholder="Nhập Số điện thoại" value="{{ old('phone') }}">
+			@if ($errors->has('phone'))
+		        <span class="text-danger">{{ $errors->first('phone') }}</span>
+		    @endif
 		</div>
 		<div class="from-group">
 			<label for="">Address</label>
-			<input type="text" name="address" class="form-control" placeholder="Nhập Địa chỉ">
+			<input type="text" name="address" class="form-control" placeholder="Nhập Địa chỉ" value="{{ old('address') }}">
+			@if ($errors->has('address'))
+		        <span class="text-danger">{{ $errors->first('address') }}</span>
+		    @endif
 		</div>
 		<div class="form-group">
 			<label for="">Role</label>

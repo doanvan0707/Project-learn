@@ -32,7 +32,7 @@
 
 		</tbody>
 	</table>
-	{{ $users->links() }}
+	{!! $users->links() !!}
 	<!-- Button trigger modal -->
 	<!-- Modal -->
 	<div class="modal modal-danger fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

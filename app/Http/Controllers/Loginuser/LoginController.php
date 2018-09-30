@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Loginuser;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ManageUser;
 use Illuminate\Support\Facades\Auth;
 use App\Role;
 use App\User;
@@ -38,7 +39,7 @@ class LoginController extends Controller
         return view('frontend.loginuser.register', compact('role'));
     }
 
-    public function showRegister(Request $request)
+    public function showRegister(ManageUser $request)
     {
         $data = $request->all();
         User::create($data);
