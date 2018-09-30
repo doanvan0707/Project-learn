@@ -1,6 +1,7 @@
 @extends('layouts.admin')
 @section('content')
 <div class="container">
+	<h1>Thêm người dùng</h1>
 	<form action="{{ route('users.store') }}" method="post">
 		{{ csrf_field() }}
 		<div class="from-group">
@@ -37,6 +38,7 @@
 		</div>
 		<div class="from-group">
 			<input type="submit" value="Đăng ký" class="btn btn-primary">
+			<a href="{{ route('users.index') }}" class="btn btn-info"><i class="fa fa-hand-o-left">&nbsp;&nbsp;Quay lại</i></a>
 		</div>
 	</form>
 </div>

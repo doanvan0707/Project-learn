@@ -16,7 +16,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::all();
+        $users = User::paginate(5);
         $roles = Role::all();
         return view('backend.users.index', compact('users', 'roles'));
     }
@@ -88,8 +88,11 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $user)
+    public function destroy(Request $request)
     {
+        // $user->delete();
+        // return redirect()->route('users.index');
+        $user = User::findOrFail($request->user_id);
         $user->delete();
         return redirect()->route('users.index');
     }

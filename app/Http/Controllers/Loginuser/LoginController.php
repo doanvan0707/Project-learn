@@ -19,6 +19,7 @@ class LoginController extends Controller
     {
     	$email = $request['email'];
     	$password = $request['password'];
+        // dd(Auth::attempt(['email' => $email, 'password' => $password]));
     	if (Auth::attempt(['email' => $email, 'password' => $password])) {
     		return redirect()->route('home.index');
     	} else {

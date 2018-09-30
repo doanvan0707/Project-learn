@@ -1,12 +1,11 @@
-@extends('layouts.master')
+@extends('layouts.admin')
 
 @section('content')
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Login</div>
-
+                <h2 class="panel-heading">Login Admin</h2>
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="">
                         {{ csrf_field() }}

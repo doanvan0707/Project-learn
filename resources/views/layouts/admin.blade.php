@@ -19,6 +19,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Main CSS-->
     <link rel="stylesheet" type="text/css" href="{{ url('css/main.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url('css/style.css') }}">
     <!-- Font-icon css-->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
@@ -133,5 +134,14 @@
     <script src="{{ url('js/plugins/pace.min.js') }}"></script>
     <!-- Page specific javascripts-->
     <script type="text/javascript" src="{{ url('js/plugins/chart.js') }}"></script>
+
+  <script>  
+    $('#delete').on('show.bs.modal', function (event) {
+      var button = $(event.relatedTarget) 
+      var user_id = button.data('userid') 
+      var modal = $(this)
+      modal.find('.modal-body #user_id').val(user_id);
+    })
+  </script>
   </body>
 </html>
